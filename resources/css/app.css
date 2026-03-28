@@ -1,0 +1,61 @@
+/* ================================================================
+   NIDAN — Main CSS Entry Point
+   ================================================================ */
+@import "./visual-editor-ui.css";
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: #fffcf7;
+  --color-on-background: #373831;
+  --color-primary: #745b29;
+  --color-on-primary: #fff6ed;
+  --color-on-surface: #373831;
+  --color-on-surface-variant: #64655d;
+  --color-surface-container-low: #fcf9f3;
+  --color-surface: #fffcf7;
+  --color-surface-container: #f6f4ec;
+  --color-surface-container-highest: #eae9de;
+  --color-primary-container: #ffdea5;
+  --color-on-primary-container: #513c0d;
+  --color-surface-bright: #fffcf7;
+  --color-outline-variant: #babab0;
+  --color-error: #a54731;
+  --font-headline: "Newsreader", ui-serif, Georgia, serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-label: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --radius-DEFAULT: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.25em;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+  -webkit-font-smoothing: antialiased;
+}
+
+@import "./test1-style-block.css";
+
+@import './variables.css';
+@import './base.css';
+@import './animations.css';
+@import './components.css';
+@import './layout.css';
+
+/* GLOBAL REVEAL */
+.reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1); }
+.reveal-left.visible { opacity: 1; transform: translateX(0); }

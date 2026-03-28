@@ -1,0 +1,150 @@
+/* ================================================================
+   NIDAN — ألوان وخطوط بأسلوب تحريري دافئ (ورقة / حبر / لمسة ترابية)
+   متوافق مع LTR و RTL — أسماء قديمة (--gold, --cream) تبقى كأسماء مستعارة
+   ================================================================ */
+
+:root {
+  /* أساس يدوي: ورق، حبر، خط فاصل */
+  /* متوافق مع test1 (#fffcf7) */
+  --paper: #fffcf7;
+  --paper-bright: #fffcf7;
+  --paper-edge: #eae9de;
+  --ink: #252320;
+  --ink-muted: #5a5550;
+  --ink-faint: #8a847b;
+  --accent: #6b4c3b;
+  --accent-soft: #8f6b52;
+  --accent-deep: #4a3428;
+  --line: rgba(37, 35, 32, 0.12);
+  --line-strong: rgba(37, 35, 32, 0.2);
+
+  /* أسماء سابقة (لا تكسر المكوّنات الحالية) */
+  --cream: var(--paper);
+  --cream-light: var(--paper-bright);
+  --cream-dark: var(--paper-edge);
+  --gold: var(--accent);
+  --gold-light: var(--accent-soft);
+  --gold-btn: var(--accent);
+  --gold-shimmer: var(--accent-deep);
+  --gold-accent: #a67c5f;
+  --dark: var(--ink);
+  --charcoal: var(--ink-muted);
+  --charcoal-light: #6d6862;
+  --text-light: var(--ink-muted);
+  --text-lighter: var(--ink-faint);
+  --white: #fffcf7;
+  --nav-bg: rgba(255, 252, 247, 0.94);
+  --nav-scrolled: rgba(255, 252, 247, 0.98);
+  --dark-section: #2a2622;
+  --dark-craft: #322e29;
+  --dark-footer: #1e1c19;
+
+  --success: #2f5d3a;
+  --success-light: #3d7a4a;
+  --warning: #9a6b2e;
+  --error: #a33a32;
+  --error-light: #c4473d;
+  --info: #3d5a73;
+
+  /* خطوط: ليست «القالب الافتراضي» لمواقع الذكاء الاصطناعي */
+  --font-serif: 'Literata', 'Georgia', 'Times New Roman', serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-arabic-serif: 'Amiri', 'Georgia', serif;
+  --font-arabic-sans: 'Vazirmatn', 'Tahoma', sans-serif;
+  --font-arabic-modern: 'Vazirmatn', sans-serif;
+
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-base: 15px;
+  --text-lg: 17px;
+  --text-xl: 19px;
+  --text-2xl: 22px;
+  --text-3xl: 26px;
+  --text-4xl: 32px;
+  --text-5xl: 38px;
+  --text-6xl: 44px;
+
+  --leading-tight: 1.15;
+  --leading-normal: 1.45;
+  --leading-relaxed: 1.65;
+  --leading-loose: 1.85;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  --section-padding-block: clamp(56px, 7vw, 88px);
+  --section-padding-inline: clamp(20px, 4vw, 40px);
+  --max-width: 1080px;
+  --max-width-wide: 1180px;
+  --max-width-ultra: 1320px;
+  /* ارتفاع الشريط الثابت القديم — المحتوى يستخدم padding على main (test1) */
+  --navbar-height: 0px;
+  --layout-header-offset: clamp(5rem, 11vw, 8rem);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-luxury: var(--ease-out);
+  --ease-expand: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.2s var(--ease-out);
+  --transition-med: 0.35s var(--ease-out);
+  --transition-slow: 0.55s var(--ease-out);
+
+  --shadow-sm: 0 1px 2px rgba(37, 35, 32, 0.06);
+  --shadow: 2px 3px 0 rgba(37, 35, 32, 0.04);
+  --shadow-md: 4px 6px 0 rgba(37, 35, 32, 0.06);
+  --shadow-lg: 6px 10px 24px rgba(37, 35, 32, 0.08);
+  --shadow-gold: none;
+  --shadow-arabic: none;
+
+  --radius-sm: 2px;
+  --radius: 3px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --radius-2xl: 10px;
+  --radius-full: 9999px;
+
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+
+  --dir: ltr;
+  --arrow-transform: rotate(0deg);
+  --text-align-start: left;
+  --text-align-end: right;
+}
+
+[dir='rtl'] {
+  --dir: rtl;
+  --font-serif: 'Amiri', Georgia, serif;
+  --font-sans: 'Vazirmatn', Tahoma, sans-serif;
+  --arrow-transform: rotate(180deg);
+  --text-align-start: right;
+  --text-align-end: left;
+}
+
+[dir='rtl'][lang='ar'] {
+  --font-sans: 'Vazirmatn', sans-serif;
+  --font-serif: 'Amiri', Georgia, serif;
+}
+
+@media (prefers-contrast: high) {
+  :root {
+    --line-strong: rgba(37, 35, 32, 0.35);
+    --ink-muted: #3d3a36;
+  }
+}
